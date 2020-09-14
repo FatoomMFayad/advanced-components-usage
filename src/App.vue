@@ -3,8 +3,8 @@
     <div class="row">
           <div class="col-xs-12">
             <appQuote>
-              <h1>The Quote</h1>
-              <p>a wonderful Quote</p>
+              <h2 slot="title">{{ quoteTitle }}</h2>
+              <p slot="content">a wonderful Quote</p>
             </appQuote>
           </div>
     </div>   
@@ -14,6 +14,11 @@
 <script>
 import Quote from './components/Quote';
 export default {
+  data: function(){
+    return{
+      quoteTitle: 'The Quote'
+    }
+  },
   components:{
     appQuote: Quote
   }
